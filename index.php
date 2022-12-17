@@ -205,7 +205,7 @@ if (!isset($_SESSION['get_all_plane_name'])) {
                            </div>
 
                            <div class="mb-4 form-group d-sm-flex margin text-light">
-                              <select class="js-example-basic-single" name="source " style="width: 100%">
+                              <select class="js-example-basic-single" name="source" style="width: 100%">
                                  <option value="">Điểm đi</option>
                                  <?php
                                        foreach($_SESSION['all_src'] as $value){
@@ -215,7 +215,7 @@ if (!isset($_SESSION['get_all_plane_name'])) {
                               </select>
                            </div>
                            <div class="mb-4 form-group d-sm-flex margin text-light">
-                              <select class="js-example-basic-single " name="source" style="width: 100%">
+                              <select class="js-example-basic-single " name="destination" style="width: 100%">
                                  <option value="">Điểm đến</option>
                                  <?php
                                        foreach($_SESSION['all_des'] as $value){
