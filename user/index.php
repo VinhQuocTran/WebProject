@@ -123,13 +123,6 @@ ob_start();
       </div>
     </div>
   </div>
-<?php
-if (isset($_SESSION['res_buy_ticket'])) {
-  echo '<script type="text/javascript">
-     alert("' . $_SESSION['res_buy_ticket'] . '")</script>';
-  unset($_SESSION['res_buy_ticket']);
-}
-?>
 </body>
 <script>
   $(".choose-ticket").click(function () {

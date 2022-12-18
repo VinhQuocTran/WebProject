@@ -52,7 +52,7 @@ if (isset($_SESSION['info_user'])) {
               <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" id="back-home" href="index.php">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-back" viewBox="0 0 16 16">
                         <path
@@ -185,9 +185,11 @@ if (isset($_SESSION['info_user'])) {
     </div>
   </div>
 <?php
-if (isset($_SESSION['res_buy_ticket'])) {
-  header("Location: index.php");
-}
+  if (isset($_SESSION['res_buy_ticket'])) {
+    echo '<script type="text/javascript">
+       alert("' . $_SESSION['res_buy_ticket'] . '")</script>';
+    unset($_SESSION['res_buy_ticket']);
+  }
 ?>
 </body>
 <script>
@@ -309,9 +311,9 @@ if (isset($_SESSION['res_buy_ticket'])) {
           .replace(" đ", "").replace("Tổng cộng: ","")
         },
         function (result) {
-          alert(result)
+          location.reload()
         });
-      $(location).prop('href', 'cart.php')
+     $(location).prop('href', 'cart.php')
     }
     else {
       alert("Vui lòng nhập đầy đủ thông tin")

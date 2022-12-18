@@ -141,7 +141,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 $strid = join(" ", $ticketDetailsID);
 $strTemp = "Mua vé thành công, hãy nhớ các vé sau: ";
 $_SESSION['res_buy_ticket'] = $strTemp . $strid;
-unset($_SESSION['ticket_in_cart']);
 header("Location: ../user/cart.php");
 exit();
 ?>
