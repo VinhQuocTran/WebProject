@@ -167,37 +167,41 @@ INSERT INTO `creditcard` (`AccountID`, `Password`, `Balanced`) VALUES
 
 
 INSERT INTO `planetype` (`PlaneName`, `PlaneLength`, `PlaneWingspan`, `Producer`) VALUES
-('Airbus A321', 45, 34, 'Airbus');
+('Airbus A321', 45, 34, 'Airbus'),
+('Airbus A333', 50, 34, 'Airbus'),
+('Airbus AB23', 65, 34, 'Airbus'),
+('BOEING 777', 70, 35, 'BOEING'),
+('BOEING 787', 75, 40, 'BOEING');
 
 INSERT INTO `flight` (`TakeoffTime`, `Duration`, `PlaneName`, `EcoSeat`, `BusSeat`, `Source`, `SourceAP`, `Destination`, `DestinationAP`) VALUES
 ('02:00:00', 120, 'Airbus A321', 160, 20, 'TP Hồ Chí Minh', 'Tân Sân Nhất', 'Hà Nội', 'Nội Bài'),
-('05:00:00', 75, 'Airbus A321', 140, 10, 'TP Hồ Chí Minh', 'Tân Sân Nhất', 'Đà Nẵng', 'Đà Nẵng'),
+('05:00:00', 75, 'Airbus A333', 140, 10, 'TP Hồ Chí Minh', 'Tân Sân Nhất', 'Đà Nẵng', 'Đà Nẵng'),
 
-('20:30:00', 120, 'Airbus A321', 180, 20, 'Hà Nội', 'Nội Bài', 'TP Hồ Chí Minh', 'Tân Sơn Nhất'),
-('05:00:00', 80, 'Airbus A321', 160, 20, 'Hà Nội', 'Nội Bài', 'Đà Nẵng', 'Đà Nẵng'),
+('20:30:00', 120, 'Airbus AB23', 180, 20, 'Hà Nội', 'Nội Bài', 'TP Hồ Chí Minh', 'Tân Sơn Nhất'),
+('05:00:00', 80, 'Airbus A333', 160, 20, 'Hà Nội', 'Nội Bài', 'Đà Nẵng', 'Đà Nẵng'),
 
 ('08:00:00', 100, 'Airbus A321', 100, 10, 'Huế', 'Phú Bài', 'Phú Quốc', 'Phú Quốc'),
-('11:00:00', 90, 'Airbus A321', 100, 10, 'Huế', 'Phú Bài', 'Vinh', 'Quốc tế Vinh'),
+('11:00:00', 90, 'BOEING 777', 100, 10, 'Huế', 'Phú Bài', 'Vinh', 'Quốc tế Vinh'),
 
-('13:00:00', 100, 'Airbus A321', 100, 10, 'Phú Quốc', 'Phú Quốc','Huế', 'Phú Bài'),
-('18:00:00', 90, 'Airbus A321', 100, 10, 'Vinh', 'Quốc tế Vinh','Huế', 'Phú Bài'),
+('13:00:00', 100, 'BOEING 787', 100, 10, 'Phú Quốc', 'Phú Quốc','Huế', 'Phú Bài'),
+('18:00:00', 90, 'Airbus AB23', 100, 10, 'Vinh', 'Quốc tế Vinh','Huế', 'Phú Bài'),
 
-('19:00:00', 45, 'Airbus A321', 150, 0, 'Đà Lạt', 'Liên Khương', 'Cần Thơ', 'Trà Nóc'),
-('18:00:00', 45, 'Airbus A321', 150, 0, 'Cần Thơ', 'Trà Nóc', 'Đà Lạt', 'Liên Khương');
+('19:00:00', 45, 'Airbus A333', 150, 0, 'Đà Lạt', 'Liên Khương', 'Cần Thơ', 'Trà Nóc'),
+('18:00:00', 45, 'BOEING 777', 150, 0, 'Cần Thơ', 'Trà Nóc', 'Đà Lạt', 'Liên Khương');
 
 INSERT INTO `person` (`Username`, `Password`, `Name`, `Email`, `Phone`, `DateOfBirth`, `DateOfRegister`, `IsAdmin`) VALUES
 ('admin', '123456', 'Vinh', 'admin@gmail.com', '342243554', '2002-10-06', '2022-12-16', b'1'),
 ('thaopro123', '123456', 'Trần Văn Thảo', 'thaopro123@gmail.com', '0911452692', '2002-11-12', '2022-12-16', b'0'),
-('user1', '123', 'Vinh', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
-('user2', '123', 'An', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
-('user3', '123', 'Thuy', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
-('user4', '123', 'Tien', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
-('user5', '123', 'Dieu', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
-('user6', '123', 'Nhi', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
-('user7', '123', 'Hong', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
-('user8', '123', 'Tham', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
-('user9', '123', 'Tram', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
-('user10', '123', 'Anh', 'a@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0');
+('user1', '123', 'Vinh', 'Vinh@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
+('user2', '123', 'An', 'An@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
+('user3', '123', 'Thuy', 'Thuy@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
+('user4', '123', 'Tien', 'Tien@gmail.com', '91111101', '2002-10-06', '2022-12-15', b'0'),
+('user5', '123', 'Dieu', 'Dieu@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
+('user6', '123', 'Nhi', 'Nhi@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
+('user7', '123', 'Hong', 'Hong@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
+('user8', '123', 'Tham', 'Tham@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
+('user9', '123', 'Tram', 'Tram@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0'),
+('user10', '123', 'Anh', 'Anh@gmail.com', '91111101', '2002-10-06', '2022-12-21', b'0');
 
 -- INSERT INTO `ticket` (`FlightCode`, `DepartureDate`, `EcoPrice`, `BusPrice`) VALUES
 CALL insert_ticket(1000, '2022-12-25', 1500000, 2800000);
@@ -241,5 +245,3 @@ INSERT INTO `ticketdetail` (`TicketID`, `UserID`, `PurchaseDate`, `AmountEcoTick
 (107, 10, '2022-12-25', 1, 2),
 (108, 11, '2022-12-25', 1, 1),
 (109, 12, '2022-12-25', 0, 2);
-
-
